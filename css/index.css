@@ -1,0 +1,328 @@
+html,
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* INFORMATION */
+
+.information {
+    background-color: #000000;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.information .nav-tabs {
+    justify-content: center;
+    padding: 60px 30px 20px 30px;
+}
+
+.information .nav-tabs .nav-link {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    padding: 8px 0;
+    margin: 0 20px;
+    border: none;
+    transition: all 0.5s;
+}
+
+.information .nav-tabs .nav-link.active {
+    color: #00adef;
+    border: none;
+    border-bottom: 1px solid #00adef;
+    background-color: transparent;
+}
+
+.information .nav-tabs .nav-link:hover {
+    border: none;
+    color: #00adef;
+}
+
+.information .nav-tabs .nav-link i {
+    margin-right: 12px;
+}
+
+.information .information__tag {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.information .information__tag .information__item,
+.information .information__tag .information__item1,
+.information .information__tag .information__item2
+{
+    position: relative;
+    border: 1px solid transparent;
+    display: none;
+}
+
+.information .information__tag .information__item img,
+.information .information__tag .information__item_mobie img,
+.information .information__tag .information__item1 img,
+.information .information__tag .information__item_mobie1 img,
+.information .information__tag .information__item2 img,
+.information .information__tag .information__item_mobie2 img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.information .information__tag .information__play,
+.information .information__tag .information__item_mobie .information__play {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+    display: flex;
+}
+
+.information .information__tag .information__play i,
+.information .information__tag .information__item_mobie .information__play i {
+    font-size: 9px;
+    width: 30px;
+    height: 25px;
+    color: #333333;
+    background-color: #efefef;
+    padding: 7px 12px;
+    visibility: visible;
+}
+
+.information .information__tag .information__play span,
+.information .information__tag .information__item_mobie .information__play span {
+    display: inline-block;
+    background-color: #333333;
+    height: 25px;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.information .information__tag .information__overlay,
+.information .information__tag .information__item_mobie .information__overlay {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 13px 31px 13px 31px;
+    transition: height 0.5s, background 1.5s;
+}
+
+.information .information__tag .information__item:hover .information__overlay,
+.information .information__tag .information__item_mobie:hover .information__overlay,
+.information .information__tag .information__item1:hover .information__overlay,
+.information .information__tag .information__item_mobie1:hover .information__overlay,
+.information .information__tag .information__item2:hover .information__overlay,
+.information .information__tag .information__item_mobie2:hover .information__overlay
+{
+    height: 25%;
+}
+
+.information .information__tag .information__item_min:hover .information__overlay,
+.information .information__tag .information__item_mobile_min:hover .information__overlay,
+.information .information__tag .information__item_min1:hover .information__overlay,
+.information .information__tag .information__item_mobile_min1:hover .information__overlay,
+.information .information__tag .information__item_min2:hover .information__overlay,
+.information .information__tag .information__item_mobile_min2:hover .information__overlay
+{
+    height: 50%;
+}
+
+.information .information__tag .information__item:hover .information__overlay p,
+.information .information__tag .information__item_mobie:hover .information__overlay p,
+.information .information__tag .information__item1:hover .information__overlay p,
+.information .information__tag .information__item_mobie1:hover .information__overlay p,
+.information .information__tag .information__item2:hover .information__overlay p,
+.information .information__tag .information__item_mobie2:hover .information__overlay p
+{
+    opacity: 1;
+}
+
+.information .information__tag .information__item:hover .information__play,
+.information .information__tag .information__item_mobie:hover .information__play,
+.information .information__tag .information__item1:hover .information__play,
+.information .information__tag .information__item_mobie1:hover .information__play,
+.information .information__tag .information__item2:hover .information__play,
+.information .information__tag .information__item_mobie2:hover .information__play
+{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.information .information__tag .information__overlay h3,
+.information .information__tag .information__item_mobie .information__overlay h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    width: auto;
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.information .information__tag .information__overlay p,
+.information .information__tag .information__item_mobie .information__overlay p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    margin-top: 2px;
+    opacity: 0;
+}
+
+.information .information__type {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.information .information__type h4 {
+    color: #fff;
+    font-size: 13px !important;
+    margin-bottom: 0;
+    width: "auto";
+    margin-right: 3px !important;
+    margin-top: 0 !important;
+}
+
+.information .information__type .information__fuel {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.information .information__type .information__km {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.information .information__tag .information__item:hover .information__type,
+.information .information__tag .information__item_mobie:hover .information__type,
+.information .information__tag .information__item1:hover .information__type,
+.information .information__tag .information__item_mobie1:hover .information__type,
+.information .information__tag .information__item2:hover .information__type,
+.information .information__tag .information__item_mobie2:hover .information__type
+{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.btn-showmore, .btn-showmore1, .btn-showmore2{
+    display: block;
+    text-align: center;
+    background: linear-gradient(#303030, #202020);
+    color: #999;
+    padding: 6px 20px;
+    line-height: 20px;
+    border: 1px solid #202020;
+    margin-top: 20px;
+
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+    outline: none;
+    transition: all 0.5s;
+}
+
+.btn-showmore:focus, .btn-showmore1:focus, .btn-showmore:focus {
+    outline: none;
+}
+
+.btn-showmore:hover, .btn-showmore:hover, .btn-showmore2:hover {
+    color: #f0f0f0;
+}
+
+.information__item__title {
+    margin-top: 0;
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    display: none;
+    
+}
+
+/* Phần hiện khi reponsive đi xuống*/
+
+.information__item_mobie, .information__item_mobie1, .information__item_mobie2 {
+    display: none;
+    border: 1px solid transparent;
+}
+
+/* REPONSIVE @MEDIA */
+@media screen and (max-width: 1200px) {
+    .colDisplayWeb {
+        display: none !important;
+    }
+
+    .information__item_mobie, .information__item_mobie1, .information__item_mobie2  {
+        display: block !important;
+    }
+
+    .information .information__tag .information__item:hover .information__overlay,
+    .information .information__tag .information__item_mobie:hover .information__overlay,
+    .information .information__tag .information__item1:hover .information__overlay,
+    .information .information__tag .information__item_mobie1:hover .information__overlay,
+    .information .information__tag .information__item2:hover .information__overlay,
+    .information .information__tag .information__item_mobie2:hover .information__overlay {
+        height: 50%;
+    }
+
+    .information .information__tag .information__overlay p,
+    .information .information__tag .information__item_mobie .information__overlay p {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0;
+        width: 100%;
+        margin-top: 2px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .information__item_mobie, .information__item_mobie1, .information__item_mobie2 {
+        margin-bottom: 75px;
+    }
+
+    .information__item__title {
+        display: block;
+    }
+
+    .information__overlay,
+    .information__play {
+        display: none;
+    }
+
+    .information .information__tag .information__play,
+    .information .information__tag .information__item_mobie .information__play{
+        display: none;
+    }
+}

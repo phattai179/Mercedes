@@ -1,0 +1,65 @@
+.footer{
+    @include text ($size: $fs-0, $color: $color-white-0);
+    .language{
+        .language__Deutsch{
+            width: 90px;
+            float: left;
+            position: relative;
+            color: $color-blue-0;
+            font-weight: bold;
+
+        // Đường gạch dọc giữa 2 ngôn ngữ
+        &:after{
+            content:'';
+            position: absolute;
+            height: 18px;
+            width: 2px;
+            background-color: $color-blue-0;
+            margin-left: 18px;
+            margin-top: 3px;
+        }
+    }
+        .language__English{
+            float: left;
+    }
+}
+    // Policiy content nội dung
+    .policy__content{
+    /* justify-content: flex-end; */
+        float: right;
+    a{
+        color: #636363;
+        margin-right: 5px;
+        text-decoration: none;
+        transition: all 0.6s;
+    &:hover{
+        color: $color-blue-0;
+    }
+    }
+    }
+    // Backtotop trở lại trang chính 
+    .backtotop{
+        float: right;
+        transition: all 0.5s;
+        .item__top{
+            width: 100%;
+            a{
+                top: 0; 
+                height: 30px;
+                text-decoration: none;
+                color: #636363;
+            }
+
+            i{
+                font-size: $fs-0 +6;
+                height: 25px;
+            &:hover{
+                color: $color-blue-0;
+            }
+            }
+        &:hover{
+            color: $color-blue-0;
+        }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+
+.footer{
+    background-color: $color-black-0;
+    padding: 0 30px;
+}
+
+
+.information__header{
+    @include text($size: $fs-0, $color: $color-white-0);
+    .header__item{
+        display: inline-block;
+        width: 285px;
+    /* Thẻ thứ nhất */
+    &:first-child{
+        width: 260px;
+    }    
+    /* thẻ thứ hai */
+    &:nth-child(2){
+        width: 240px;
+    }
+    }
+    .header__content{
+        @include text($size: $fs-0, $color: $color-white-0);
+        width: 100%;
+        margin-top: $mg-1 +8;
+    }
+}
+
+/* categories info */
+.categories__info{
+    // Toàn nội dung được định dạng
+    .categories__part{
+        @include text($size: $fs-0, $color: $color-white-0);
+        // Danh sách nội dung
+        ul li{
+            list-style-type: none;
+            padding: 0;
+            transition: all 0.4s;
+        &:hover{
+            color: $color-blue-0;
+        }
+        }
+        // Tiêu đề danh sách
+        p{  
+            font-size: $fs-0 + 10;
+            font-weight: $fw-bold;
+        }
+    }
+}
+
+

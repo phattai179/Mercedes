@@ -1,0 +1,79 @@
+/* Navigation Button */
+#navButton a{
+    z-index: 100;
+    position: fixed;
+    top: 33%;
+    right: -206px;
+
+
+    display: flex;
+    text-decoration: none;
+    background-color: #1f1f1f;
+    color: white;
+    width: 250px;
+    font-size: 16px;
+    margin-bottom: 1px;
+    align-items: center;
+    z-index: 21111;
+    transition: all 0.5s;
+}
+
+#navButton #navButton_product{
+    top: 200px;
+}
+
+#navButton #navButton_config{
+    top: 245px;
+}
+
+#navButton #navButton_news{
+    top: 290px;
+}
+
+#navButton #navButton_internet{
+    top: 335px;
+}
+#navButton a:hover{
+    right: 0;
+}
+
+#navButton a i{
+    margin-right: 5px;
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+
+#navButton #navButton_internet i:hover{
+    color: #00adef;
+}
+
+.navButton_res{
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* justify-content: space-between; */
+}
+.navButton_res a{
+    display: block;
+    text-decoration: none;
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 13px;
+    margin: 1px;
+    text-align: center;
+    align-items: center;
+    z-index: 500;
+    transition: all 0.5s;
+    padding: 10px 10px 2px 10px ;
+    width: 100%;
+}
+
+.navButton_res a i{
+    display: block;
+    font-size: 23px;
+}

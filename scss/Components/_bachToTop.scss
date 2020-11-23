@@ -1,0 +1,29 @@
+.backToTop{
+    position: fixed;
+    right: 30px;
+    bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    
+    span{
+        @include styleText($color-gray-1, $fs-0, $fw-bold-0);
+        margin-right: 1px;
+        display: inline-block
+    }
+
+    i{
+        color: $color-gray-1;
+        font-size: $fs-1 + 5;
+        opacity: 0.5;
+        vertical-align: bottom;
+    }
+    &:hover span,
+    &:hover i{
+        color: $color-blue-0;
+    }
+}
+
+.cd-top--is-visible{
+    opacity: 1;
+    visibility: visible;
+}

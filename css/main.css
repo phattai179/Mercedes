@@ -1,0 +1,1240 @@
+@charset "UTF-8";
+html,
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Button */
+#navButton a {
+  z-index: 100;
+  position: fixed;
+  top: 33%;
+  right: -206px;
+  display: flex;
+  text-decoration: none;
+  background-color: #1f1f1f;
+  color: white;
+  width: 250px;
+  font-size: 16px;
+  margin-bottom: 1px;
+  align-items: center;
+  z-index: 21111;
+  transition: all 0.5s;
+}
+
+#navButton #navButton_product {
+  top: 200px;
+}
+
+#navButton #navButton_config {
+  top: 245px;
+}
+
+#navButton #navButton_news {
+  top: 290px;
+}
+
+#navButton #navButton_internet {
+  top: 335px;
+}
+
+#navButton a:hover {
+  right: 0;
+}
+
+#navButton a i {
+  margin-right: 5px;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+}
+
+#navButton #navButton_internet i:hover {
+  color: #00adef;
+}
+
+.navButton_res {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* justify-content: space-between; */
+}
+
+.navButton_res a {
+  display: block;
+  text-decoration: none;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 13px;
+  margin: 1px;
+  text-align: center;
+  align-items: center;
+  z-index: 500;
+  transition: all 0.5s;
+  padding: 10px 10px 2px 10px;
+  width: 100%;
+}
+
+.navButton_res a i {
+  display: block;
+  font-size: 23px;
+}
+
+.myHeader {
+  background-color: #000000;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  transition: top 0.5s;
+}
+
+.myHeader .container-fluid {
+  max-width: 1440px;
+}
+
+.myHeader__top ul {
+  list-style: none;
+  text-align: right;
+}
+
+.myHeader__top ul li {
+  text-decoration: none;
+  display: inline;
+}
+
+.myHeader__top ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin: 0 10px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.myHeader__top-icon::before {
+  content: 'i';
+  border: 2px solid white;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  left: -16%;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+  font-size: 13px;
+}
+
+.myHeader__top li:hover a, .myHeader__top li:hover .myHeader__top-icon::before {
+  color: #00adef;
+  border-color: #00adef;
+}
+
+.myHeader__bottom .imgLogo {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  margin: 0;
+}
+
+.myHeader .myHeader__bottom .navbar-collapse {
+  margin-top: 24px;
+}
+
+.myHeader .myHeader__bottom .nav-link {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  margin: 0 20px;
+  width: auto;
+  padding: 0;
+}
+
+.myHeader .myHeader__bottom .nav-item:hover .nav-link {
+  color: #00adef;
+}
+
+.myHeader .myHeader__bottom .navbar-light .navbar-toggler {
+  background-color: #000000;
+}
+
+.myHeader .myHeader__bottom .navbar-light .navbar-toggler:focus {
+  outline: none;
+}
+
+.myHeader .myHeader__bottom .navbar-light .navbar-toggler i {
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.myHeader .myHeader__bottom .navbar-light .fa-search:hover,
+.myHeader .myHeader__bottom .navbar-light .navbar-toggler .fa-bars:hover {
+  color: #00adef !important;
+}
+
+/* Reponsive */
+@media screen and (max-width: 1200px) {
+  .myHeader__bottom .navbar-nav {
+    text-align: center !important;
+  }
+  .myHeader__bottom .navbar-nav .search__mobie {
+    display: none;
+  }
+  .myHeader .myHeader__bottom .nav-link {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    margin: 10px 0;
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myHeader .myHeader__top ul li:nth-child(1), .myHeader .myHeader__top ul li:nth-child(2) {
+    display: none;
+  }
+  .myHeader__bottom .imgLogo {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+  }
+  .myHeader__bottom .imgBrand {
+    width: 100px;
+    margin-left: 30px !important;
+    margin-top: 5px !important;
+  }
+}
+
+/* Carousel */
+.myCarousel {
+  position: relative;
+  margin-top: 100px;
+}
+
+.myCarousel .carousel__item1 {
+  background-image: url(../img/Carousel__01_new_01-mercedes-benz-shes-mercedes-five-years-3400x1440.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.myCarousel .carousel__item2 {
+  background-image: url(../img/Carousel__02-mercedes-benz-virgil-abloh-3400x1480.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.myCarousel .carousel__item3 {
+  background-image: url(../img/Carousel__03_01-mercedes-benz-vehicles-s-class-2020-br-223-3400x1440.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.myCarousel .carousel__item4 {
+  background-image: url(../img/Carousel_04-S-class_3400x1440px_2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.myCarousel .carousel__item5 {
+  background-image: url(../img/Carousel_05_mbcom-classic-quiz-dreamcars-header-quiz-3400x1440.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.carousel__intro {
+  padding-top: 65px;
+  padding-left: 120px;
+}
+
+@keyframes anamation_fadeDowm {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.myCarousel .carousel__intro h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 14px;
+  width: 40%;
+  /* animation-name: anamation_fadeDowm;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 1s; */
+}
+
+.myCarousel .carousel__intro button {
+  padding: 7px 20px;
+  border-radius: 0;
+  border: 1px solid #202020;
+  background-color: #333333;
+  margin-top: 10px;
+  /* animation-name: anamation_fadeDowm;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s; */
+}
+
+.carousel__item {
+  overflow: visible;
+}
+
+.carousel__intro1 {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
+.myCarousel .carousel__intro1 h1 {
+  color: #333333;
+  font-size: 26px;
+  margin-bottom: 14px;
+  width: 35%;
+}
+
+.myCarousel .carousel__intro1 button {
+  padding: 7px 20px;
+  border-radius: 0;
+  border: 1px solid #202020;
+  background-color: #333333;
+  /* margin-top: 10px; */
+  text-align: center;
+}
+
+.myCarousel .carousel__intro button:hover {
+  background-color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  color: #f0f0f0;
+}
+
+.myCarousel .carousel-control-next .carousel-control-next-icon {
+  position: absolute;
+  display: block;
+  color: #fff;
+  right: 50px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.myCarousel .carousel-control-prev .carousel-control-prev-icon {
+  position: absolute;
+  display: block;
+  color: #fff !important;
+  left: 50px !important;
+  font-weight: 600;
+}
+
+.myCarousel .carousel-control-next:focus,
+.myCarousel .carousel-control-next:hover {
+  color: #00adef !important;
+  opacity: 1;
+  outline: none;
+  text-decoration: #00adef;
+}
+
+.myCarousel .search {
+  background: #141414;
+  padding: 26px 0;
+}
+
+.myCarousel .search .input-group {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid #ececec;
+}
+
+.myCarousel .search .input-group .form-control {
+  border-radius: 0;
+  background-color: #ececec;
+  border: 1px solid #ececec;
+  color: #333333;
+  font-size: 18px;
+  border: none;
+}
+
+.myCarousel .search .input-group .form-control:focus,
+.myCarousel .search .input-group .form-control:focus .input-group {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #ececec;
+}
+
+.myCarousel .search .input-group .input-group-append {
+  border-radius: 0;
+  background-color: #ececec;
+  border: 1px solid #ececec;
+  color: #333333;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+.myCarousel .search .input-group .input-group-append:hover span {
+  background: #ececec;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+/* Reponsive */
+@media screen and (max-width: 992px) {
+  .carousel .carousel__intro h1 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 14px;
+    width: 60%;
+  }
+  .carousel__intro {
+    padding-top: 45px;
+    padding-left: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__intro {
+    display: none;
+  }
+  .carousel .carousel__item1 {
+    background-image: url(../img/Carousel__06_new_-mercedes-benz-shes-mercedes-five-years-3400x1440.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+  }
+  .carousel .carousel__item2 {
+    background-image: url(../img/Carousel__02-mercedes-benz-virgil-abloh-3400x1480.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+  }
+  .carousel .carousel__item3 {
+    background-image: url(../img/Carousel__03_01-mercedes-benz-vehicles-s-class-2020-br-223-3400x1440.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+  }
+  .carousel .carousel__item4 {
+    background-image: url(../img/Carousel_04-S-class_3400x1440px_2.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+  }
+  .carousel .carousel__item5 {
+    background-image: url(../img/Carousel_05_mbcom-classic-quiz-dreamcars-header-quiz-3400x1440.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+  }
+  .carousel .carousel-control-next .carousel-control-next-icon {
+    position: absolute;
+    right: 50px;
+    top: 25%;
+  }
+  .carousel .carousel-control-prev .carousel-control-prev-icon {
+    position: absolute;
+    left: 50px !important;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .carousel .carousel__intro h1 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 14px;
+    width: 60%;
+  }
+  .carousel__intro {
+    padding-top: 45px;
+    padding-left: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__intro {
+    display: none;
+  }
+  .carousel .carousel__item1 {
+    background-image: url(../img/Carousel__06_new_-mercedes-benz-shes-mercedes-five-years-3400x1440.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+  }
+  .carousel .carousel__item2 {
+    background-image: url(../img/Carousel__02-mercedes-benz-virgil-abloh-3400x1480.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+  }
+  .carousel .carousel__item3 {
+    background-image: url(../img/Carousel__03_01-mercedes-benz-vehicles-s-class-2020-br-223-3400x1440.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+  }
+  .carousel .carousel__item4 {
+    background-image: url(../img/Carousel_04-S-class_3400x1440px_2.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+  }
+  .carousel .carousel__item5 {
+    background-image: url(../img/Carousel_05_mbcom-classic-quiz-dreamcars-header-quiz-3400x1440.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+  }
+  .carousel .carousel-control-next .carousel-control-next-icon {
+    position: absolute;
+    right: 50px;
+    top: 25%;
+  }
+  .carousel .carousel-control-prev .carousel-control-prev-icon {
+    position: absolute;
+    left: 50px !important;
+    top: 25%;
+  }
+}
+
+/* Website */
+.website {
+  background-color: #000000;
+  padding: 50px 0;
+  padding-bottom: 0;
+}
+
+.website__content {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.website__intro {
+  width: 50%;
+  color: white;
+  padding: 60px 0;
+}
+
+.website .website__intro h3 {
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.website .website__intro p {
+  font-size: 15px;
+  width: 90%;
+}
+
+.website .website__intro button {
+  border-radius: 0;
+  background-color: #00adef;
+  border: 1px solid #00adef;
+  padding: 5px 12px 6px 12px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-top: 25px;
+}
+
+.website .website__intro button:hover {
+  background-color: #0088c6;
+  border: 1px solid #0088c6;
+  color: #fff;
+  border-radius: 1px;
+}
+
+.website__list .website__list__item {
+  cursor: pointer;
+  position: relative;
+}
+
+.website__list .website__list__item::after {
+  content: "";
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #00adef !important;
+  z-index: 5;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.website__list .website__list__item:hover::after {
+  opacity: 1;
+  height: 7px;
+}
+
+.website__list .website__list__item img {
+  width: 100%;
+}
+
+.website .website__list .col-md-3 {
+  padding: 0 9px !important;
+}
+
+/* reponsive */
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+  .website__intro {
+    width: 75%;
+    color: white;
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .website__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .website__intro {
+    width: 100%;
+    color: white;
+    padding: 60px 0;
+  }
+  .website .website__intro h3 {
+    margin-bottom: 14px;
+    font-size: 23px;
+  }
+  .website .website__intro p {
+    font-size: 15px;
+    width: 90%;
+  }
+  .website .website__intro button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .website .website__list .col-md-3 {
+    padding: 5px !important;
+  }
+}
+
+/* INFORMATION */
+.information {
+  background-color: #000000;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.information .nav-tabs {
+  justify-content: center;
+  padding: 60px 30px 20px 30px;
+}
+
+.information .nav-tabs .nav-link {
+  padding: 8px 0;
+  margin: 0 20px;
+  border: none;
+  transition: all 0.5s;
+  color: #dedede;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.information .nav-tabs .nav-link.active {
+  color: #00adef;
+  border: none;
+  border-bottom: 1px solid #00adef;
+  background-color: transparent;
+}
+
+.information .nav-tabs .nav-link:hover {
+  border: none;
+  color: #00adef;
+}
+
+.information .nav-tabs .nav-link i {
+  margin-right: 12px;
+}
+
+.information .information__tag {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.information .information__tag .information__item,
+.information .information__tag .information__item1,
+.information .information__tag .information__item2 {
+  position: relative;
+  border: 1px solid transparent;
+  display: none;
+}
+
+.information .information__tag .information__item img,
+.information .information__tag .information__item_mobie img,
+.information .information__tag .information__item1 img,
+.information .information__tag .information__item_mobie1 img,
+.information .information__tag .information__item2 img,
+.information .information__tag .information__item_mobie2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.information .information__tag .information__play,
+.information .information__tag .information__item_mobie .information__play {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+  display: flex;
+}
+
+.information .information__tag .information__play i,
+.information .information__tag .information__item_mobie .information__play i {
+  font-size: 9px;
+  width: 30px;
+  height: 25px;
+  color: #333333;
+  background-color: #efefef;
+  padding: 7px 12px;
+  visibility: visible;
+}
+
+.information .information__tag .information__play span,
+.information .information__tag .information__item_mobie .information__play span {
+  display: inline-block;
+  background-color: #333333;
+  height: 25px;
+  padding: 0 15px;
+  color: #fff;
+}
+
+.information .information__tag .information__overlay,
+.information .information__tag .information__item_mobie .information__overlay {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 13px 31px 13px 31px;
+  transition: height 0.5s, background 1.5s;
+}
+
+.information .information__tag .information__item:hover .information__overlay,
+.information .information__tag .information__item_mobie:hover .information__overlay,
+.information .information__tag .information__item1:hover .information__overlay,
+.information .information__tag .information__item_mobie1:hover .information__overlay,
+.information .information__tag .information__item2:hover .information__overlay,
+.information .information__tag .information__item_mobie2:hover .information__overlay {
+  height: 25%;
+}
+
+.information .information__tag .information__item_min:hover .information__overlay,
+.information .information__tag .information__item_mobile_min:hover .information__overlay,
+.information .information__tag .information__item_min1:hover .information__overlay,
+.information .information__tag .information__item_mobile_min1:hover .information__overlay,
+.information .information__tag .information__item_min2:hover .information__overlay,
+.information .information__tag .information__item_mobile_min2:hover .information__overlay {
+  height: 50%;
+}
+
+.information .information__tag .information__item:hover .information__overlay p,
+.information .information__tag .information__item_mobie:hover .information__overlay p,
+.information .information__tag .information__item1:hover .information__overlay p,
+.information .information__tag .information__item_mobie1:hover .information__overlay p,
+.information .information__tag .information__item2:hover .information__overlay p,
+.information .information__tag .information__item_mobie2:hover .information__overlay p {
+  opacity: 1;
+}
+
+.information .information__tag .information__item:hover .information__play,
+.information .information__tag .information__item_mobie:hover .information__play,
+.information .information__tag .information__item1:hover .information__play,
+.information .information__tag .information__item_mobie1:hover .information__play,
+.information .information__tag .information__item2:hover .information__play,
+.information .information__tag .information__item_mobie2:hover .information__play {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.information .information__tag .information__overlay h3,
+.information .information__tag .information__item_mobie .information__overlay h3 {
+  line-height: 24px;
+  margin: 0;
+  width: auto;
+  padding-top: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #dedede;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.information .information__tag .information__overlay p,
+.information .information__tag .information__item_mobie .information__overlay p {
+  margin: 0;
+  width: 100%;
+  margin-top: 2px;
+  opacity: 0;
+  color: #dedede;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.information .information__type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.information .information__type h4 {
+  color: #fff;
+  font-size: 13px !important;
+  margin-bottom: 0;
+  width: "auto";
+  margin-right: 3px !important;
+  margin-top: 0 !important;
+}
+
+.information .information__type .information__fuel {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+.information .information__type .information__km {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.information .information__tag .information__item:hover .information__type,
+.information .information__tag .information__item_mobie:hover .information__type,
+.information .information__tag .information__item1:hover .information__type,
+.information .information__tag .information__item_mobie1:hover .information__type,
+.information .information__tag .information__item2:hover .information__type,
+.information .information__tag .information__item_mobie2:hover .information__type {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.btn-showmore, .btn-showmore1, .btn-showmore2 {
+  display: block;
+  text-align: center;
+  background: linear-gradient(#303030, #202020);
+  color: #999;
+  padding: 6px 20px;
+  line-height: 20px;
+  border: 1px solid #202020;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  transition: all 0.5s;
+}
+
+.btn-showmore:focus, .btn-showmore1:focus, .btn-showmore:focus {
+  outline: none;
+}
+
+.btn-showmore:hover, .btn-showmore:hover, .btn-showmore2:hover {
+  color: #f0f0f0;
+}
+
+.information__item__title {
+  margin-top: 0;
+  color: white;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding-left: 25px;
+  display: none;
+}
+
+/* Phần hiện khi reponsive đi xuống*/
+.information__item_mobie, .information__item_mobie1, .information__item_mobie2 {
+  display: none;
+  border: 1px solid transparent;
+}
+
+/* REPONSIVE @MEDIA */
+@media screen and (max-width: 1200px) {
+  .colDisplayWeb {
+    display: none !important;
+  }
+  .information__item_mobie, .information__item_mobie1, .information__item_mobie2 {
+    display: block !important;
+  }
+  .information .information__tag .information__item:hover .information__overlay,
+  .information .information__tag .information__item_mobie:hover .information__overlay,
+  .information .information__tag .information__item1:hover .information__overlay,
+  .information .information__tag .information__item_mobie1:hover .information__overlay,
+  .information .information__tag .information__item2:hover .information__overlay,
+  .information .information__tag .information__item_mobie2:hover .information__overlay {
+    height: 50%;
+  }
+  .information .information__tag .information__overlay p,
+  .information .information__tag .information__item_mobie .information__overlay p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    margin-top: 2px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .information__item_mobie, .information__item_mobie1, .information__item_mobie2 {
+    margin-bottom: 75px;
+  }
+  .information__item__title {
+    display: block;
+  }
+  .information__overlay,
+  .information__play {
+    display: none;
+  }
+  .information .information__tag .information__play,
+  .information .information__tag .information__item_mobie .information__play {
+    display: none;
+  }
+}
+
+.footer {
+  background-color: #000000;
+  padding: 0 30px;
+}
+
+.information__header {
+  font-size: 14px;
+  color: #dedede;
+}
+
+.information__header .header__item {
+  display: inline-block;
+  width: 285px;
+  /* Thẻ thứ nhất */
+  /* thẻ thứ hai */
+}
+
+.information__header .header__item:first-child {
+  width: 260px;
+}
+
+.information__header .header__item:nth-child(2) {
+  width: 240px;
+}
+
+.information__header .header__content {
+  font-size: 14px;
+  color: #dedede;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* categories info */
+.categories__info .categories__part {
+  font-size: 14px;
+  color: #dedede;
+}
+
+.categories__info .categories__part ul li {
+  list-style-type: none;
+  padding: 0;
+  transition: all 0.4s;
+}
+
+.categories__info .categories__part ul li:hover {
+  color: #00adef;
+}
+
+.categories__info .categories__part p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brand__logo {
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.brand__logo .logo__item {
+  width: 170px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+.horizon {
+  height: 14px;
+  width: 100% !important;
+  position: relative;
+  margin: 0 auto;
+}
+
+.horizon:after {
+  background: rgba(51, 51, 51, 0.911);
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  left: -10px;
+  right: -20px;
+}
+
+.footer {
+  font-size: 14px;
+  color: #dedede;
+}
+
+.footer .language .language__Deutsch {
+  width: 90px;
+  float: left;
+  position: relative;
+  color: #00adef;
+  font-weight: bold;
+}
+
+.footer .language .language__Deutsch:after {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 2px;
+  background-color: #00adef;
+  margin-left: 18px;
+  margin-top: 3px;
+}
+
+.footer .language .language__English {
+  float: left;
+}
+
+.footer .policy__content {
+  /* justify-content: flex-end; */
+  float: right;
+}
+
+.footer .policy__content a {
+  color: #636363;
+  margin-right: 5px;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+
+.footer .policy__content a:hover {
+  color: #00adef;
+}
+
+.footer .backtotop {
+  float: right;
+  transition: all 0.5s;
+}
+
+.footer .backtotop .item__top {
+  width: 100%;
+}
+
+.footer .backtotop .item__top a {
+  top: 0;
+  height: 30px;
+  text-decoration: none;
+  color: #636363;
+}
+
+.footer .backtotop .item__top i {
+  font-size: 20px;
+  height: 25px;
+}
+
+.footer .backtotop .item__top i:hover {
+  color: #00adef;
+}
+
+.footer .backtotop .item__top:hover {
+  color: #00adef;
+}
+
+.contact {
+  background-color: #000000;
+}
+
+.contact .contact__title {
+  font-size: 24px;
+  color: #dedede;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.911);
+  margin-bottom: 26px;
+}
+
+.contact .contact__content {
+  font-size: 14px;
+  color: #dedede;
+}
+
+.contact .contact__content .input-group {
+  width: 100%;
+}
+
+.contact .contact__content .input-group .form-control {
+  margin: 14px 0;
+  background-color: #2a2a2a;
+  height: 2.85rem;
+  color: #dedede;
+  font-size: 1.5rem;
+  border-radius: 0;
+  padding: 3px 1rem;
+  vertical-align: top;
+  border: none;
+}
+
+.contact .contact__content .input-group .form-control:focus {
+  background-color: #2a2a2a;
+  color: #dedede;
+  outline: none;
+  border: 1px solid #5c5c5c;
+  box-shadow: none;
+}
+
+.contact .contact__content .input-group .input-group-append {
+  width: 30%;
+  font-size: 1rem;
+  height: 2.85rem;
+  margin: 14px 0;
+}
+
+.contact .contact__content .input-group .input-group-append .input-group-text {
+  width: 100%;
+  padding: 6px 20px;
+  font-size: 14px;
+  transition: all 0.5s;
+  background: linear-gradient(#242424, #0b0b0b);
+  border: none;
+}
+
+.contact .contact__content .input-group .input-group-append .input-group-text .input-group-text i {
+  font-size: 18px;
+  margin-right: 3px;
+  background: none;
+}
+
+.contact .contact__content .input-group .input-group-append .input-group-text:hover {
+  color: #00ADEF;
+}
+
+.contact .contact__content label {
+  margin: 14px 0;
+}
+
+.contact .contact__content b:hover {
+  color: #00ADEF;
+  transition: all 0.5s;
+}
+
+.contact .social__icon i {
+  font-size: 25px;
+  height: 30px;
+  text-align: center;
+  margin: 15px;
+  margin-right: 35px;
+  margin-left: 0;
+  width: 30px;
+}
+
+.backToTop {
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.backToTop span {
+  color: #636363;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 1px;
+  display: inline-block;
+}
+
+.backToTop i {
+  color: #636363;
+  font-size: 21px;
+  opacity: 0.5;
+  vertical-align: bottom;
+}
+
+.backToTop:hover span,
+.backToTop:hover i {
+  color: #00adef;
+}
+
+.cd-top--is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=main.css.map */

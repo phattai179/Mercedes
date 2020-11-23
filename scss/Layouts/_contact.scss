@@ -1,0 +1,78 @@
+.contact{
+    background-color: $color-black-0;
+    // Định dạng của tiêu đề
+    .contact__title{
+        @include text($size: $fs-2, $color: $color-white-0);
+        font-weight: $fw-bold;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.911);
+        margin-bottom: $mg-1 + 10;
+    }
+    // Định dạng cho nội dung tiêu đè
+    .contact__content{
+        @include text($size: $fs-0, $color: $color-white-0);
+        .input-group{
+            width: 100%;
+            // Nội dung chứa email
+            .form-control{
+                margin: 14px 0;
+                background-color: #2a2a2a;
+                height: 2.85rem;
+                color: $color-white-0;
+                font-size: 1.5rem;
+                border-radius: 0;
+                padding: 3px 1rem;
+                vertical-align: top;
+                border:none;
+            &:focus{
+                background-color: #2a2a2a;
+                color: $color-white-0;
+                outline: none;
+                border: 1px solid #5c5c5c;
+                box-shadow: none;
+            }
+            }
+            .input-group-append{
+                width: 30%;
+                font-size: 1rem;
+                height: 2.85rem;
+                margin: 14px 0;
+                // phần button đăng ký
+                .input-group-text{
+                    width: 100%;
+                    padding: 6px 20px;
+                    font-size: 14px;
+                    transition: all 0.5s;
+                    background: linear-gradient(#242424, #0b0b0b);
+                    border: none;
+                    .input-group-text i{
+                        font-size: 18px;
+                        margin-right: 3px;
+                        background: none;
+                    }
+                    &:hover{
+                        color: #00ADEF;
+                    }
+                }
+            }
+        }
+        label{
+            margin: 14px 0;
+        }
+        b:hover{
+            color: #00ADEF;
+            transition: all 0.5s;
+        }
+    }
+    .social__icon i{
+        font-size: 25px;
+        height: 30px;
+        text-align: center;
+        margin: 15px;
+        margin-right: 35px;
+        margin-left: 0;
+        width: 30px
+    }
+}
+
+
+
